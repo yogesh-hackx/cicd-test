@@ -4,7 +4,7 @@ version: 2.1
 jobs:
   pull-and-build:
     docker:
-      - image: circleci/node:5.0.2
+      - image: circleci/node:8.11.1
     steps:
       - checkout
       - run:
