@@ -25,7 +25,10 @@ jobs:
           key: dependency-cache-{{checksum "package-lock.json"}}
           paths:
             - ./node_modules
-      - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./deploy.sh"
+      - run:
+          name: setup
+          command: chmod 755 .circleci/deploy.sh
+      - run: ./.circleci/deploy.sh
 
 # Orchestrate our job run sequence
 workflows:
