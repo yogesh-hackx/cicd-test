@@ -4,4 +4,3 @@
 aws s3 sync . s3://pvhubdeployments/pay-ally --exclude ".git/*" --exclude "node_modules/*"
 
 ssh -oStrictHostKeyChecking=no -v ec2-user@43.205.240.113 "./deploy.sh"
-
