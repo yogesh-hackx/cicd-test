@@ -25,6 +25,7 @@ jobs:
           key: dependency-cache-{{checksum "package-lock.json"}}
           paths:
             - ./node_modules
+      - aws-cli/install
       - run:
           name: setup
           command: chmod 755 .circleci/deploy.sh
