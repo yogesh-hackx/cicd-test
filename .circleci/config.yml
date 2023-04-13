@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+    aws-s3: circleci/aws-s3@x.y.z # use the AWS S3 orb in your configuration
+
 # Define the jobs we want to run for this project
 jobs:
   pull-and-build:
